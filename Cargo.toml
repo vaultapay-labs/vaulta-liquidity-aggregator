@@ -5,9 +5,6 @@ edition = "2021"
 description = "Cross-protocol liquidity routing aggregator for Solana with Jupiter, Raydium, Orca integration and MEV protection"
 authors = ["Vaulta Protocol"]
 license = "MIT OR Apache-2.0"
-repository = "https://github.com/vaultapay/vaulta-liquidity-aggregator"
-homepage = "https://vaultapay.com"
-documentation = "https://docs.vaultapay.com/vaulta-liquidity-aggregator"
 
 [dependencies]
 # Solana SDK
