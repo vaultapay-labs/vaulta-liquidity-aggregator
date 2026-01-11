@@ -374,30 +374,5 @@ This project is licensed under either of:
 
 at your option.
 
-## 🙏 Acknowledgments
-
-- Built for the [Vaulta Protocol](https://vaultapay.com)
-- Integrates with [Jupiter](https://jup.ag), [Raydium](https://raydium.io), and [Orca](https://orca.so)
-- Inspired by best practices from DeFi aggregators
-
-## 📞 Support
-
-- **Documentation**: [docs.vaultapay.com](https://docs.vaultapay.com)
-- **Issues**: [GitHub Issues](https://github.com/vaultapay/vaulta-liquidity-aggregator/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/vaultapay/vaulta-liquidity-aggregator/discussions)
-
-## 🔗 Related Projects
-
-- [vaulta-anchor-core](https://github.com/vaultapay/vaulta-anchor-core) - Core smart vault programs
-- [vaulta-ai-router](https://github.com/vaultapay/vaulta-ai-router) - AI capital routing engine
-- [vaulta-simulator](https://github.com/vaultapay/vaulta-simulator) - Capital routing simulator
-
----
-
-<div align="center">
-
-**Built with ❤️ for the Vaulta Protocol**
-
-[Website](https://vaultapay.com) • [Documentation](https://docs.vaultapay.com) • [Twitter](https://twitter.com/vaultapay)
 
 </div>
