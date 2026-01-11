@@ -1,0 +1,100 @@
+[package]
+name = "vaulta-liquidity-aggregator"
+version = "0.1.0"
+edition = "2021"
+description = "Cross-protocol liquidity routing aggregator for Solana with Jupiter, Raydium, Orca integration and MEV protection"
+authors = ["Vaulta Protocol"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/vaultapay/vaulta-liquidity-aggregator"
+homepage = "https://vaultapay.com"
+documentation = "https://docs.vaultapay.com/vaulta-liquidity-aggregator"
+
+[dependencies]
+# Solana SDK
+solana-sdk = "1.18"
+solana-client = "1.18"
+solana-program = "1.18"
+anchor-client = "0.29"
+anchor-lang = "0.29"
+
+# Async runtime
+tokio = { version = "1.35", features = ["full"] }
+async-trait = "0.1"
+
+# HTTP client for DEX APIs
+reqwest = { version = "0.11", features = ["json", "rustls-tls"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Error handling
+thiserror = "1.0"
+anyhow = "1.0"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+
+# CLI
+clap = { version = "4.4", features = ["derive"] }
+
+# Decimal precision for financial calculations
+rust_decimal = { version = "1.33", features = ["serde-with-str"] }
+
+# Time handling
+chrono = { version = "0.4", features = ["serde"] }
+
+# Crypto utilities
+bs58 = "0.5"
+sha2 = "0.10"
+ed25519-dalek = "2.1"
+
+# Parallel processing
+rayon = "1.8"
+
+# Configuration
+config = "0.14"
+
+# Retry logic
+backoff = "0.4"
+
+# Rate limiting
+governor = "0.6"
+
+# URL parsing
+url = "2.5"
+
+# Base58 encoding
+base58 = "0.2"
+
+# JSON-RPC client
+jsonrpc-core = "18.0"
+jsonrpc-client-transports = "18.0"
+
+# WebSocket support
+tokio-tungstenite = { version = "0.21", features = ["native-tls"] }
+
+# Cache
+moka = "0.12"
+
+# Metrics (optional)
+metrics = "0.22"
+metrics-prometheus = "0.6"
+
+[dev-dependencies]
+criterion = { version = "0.5", features = ["html_reports"] }
+proptest = "1.4"
+tokio-test = "0.4"
+
+[[bench]]
+name = "path_finding_bench"
+harness = false
+
+[[bench]]
+name = "mev_protection_bench"
+harness = false
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
